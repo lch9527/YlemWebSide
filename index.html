@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>我的网站</title>
+    <meta name="description" content="这是一个用 HTML 和 CSS 构建的超轻量静态网站模板。" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>我的网站</h1>
+        <nav class="nav">
+          <a href="#">首页</a>
+          <a href="#features">功能</a>
+          <a href="#contact">联系</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h2>你好，世界！</h2>
+          <p>你正在浏览一个完全由 <strong>HTML + CSS</strong> 构建的静态网站。编辑 <code>index.html</code> 与 <code>styles.css</code> 即可改变内容与样式。</p>
+          <a class="btn" href="#features">开始了解</a>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container grid">
+          <article class="card">
+            <h3>纯静态</h3>
+            <p>无后端、无数据库，部署简单，成本低。</p>
+          </article>
+          <article class="card">
+            <h3>响应式</h3>
+            <p>在手机、平板、桌面端都保持良好布局。</p>
+          </article>
+          <article class="card">
+            <h3>可扩展</h3>
+            <p>需要时再增加 JavaScript 或第三方组件。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h3>联系我</h3>
+          <p>把邮箱、微信或社媒链接放在这里。</p>
+          <ul class="links">
+            <li><a href="mailto:you@example.com">you@example.com</a></li>
+            <li><a href="#">微博</a></li>
+            <li><a href="#">B站</a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© <span id="year"></span> 我的站点. 保留所有权利。</small>
+      </div>
+    </footer>
+
+    <script>
+      // 可选：自动更新年份（如果不需要 JS，可以删除整个 <script> 块）
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
