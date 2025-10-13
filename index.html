@@ -4,15 +4,18 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Ylem Studio — VR Games</title>
-    <meta name="description" content="Ylem Studio is a VR video game company crafting cinematic, highly tactile puzzle adventures in a retro‑future universe." />
+    <meta name="description" content="Ylem Studio crafts premium VR puzzle adventures in a retro‑future universe." />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <!-- Nav -->
-    <header class="nav">
+    <!-- Top Bar -->
+    <header class="nav" role="banner">
       <div class="container nav-inner">
-        <a class="brand" href="#" aria-label="Ylem Studio home">Ylem<span class="dot">•</span>Studio</a>
+        <a class="brand" href="#" aria-label="Ylem Studio home">
+          <span class="glyph">Y</span>
+          <span class="brand-text">Ylem Studio</span>
+        </a>
         <nav class="menu" aria-label="primary">
           <a href="#games">Games</a>
           <a href="#universe">Universe</a>
@@ -23,97 +26,90 @@
     </header>
 
     <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <div class="eyebrow">VR Video Game Studio</div>
-        <h1>Make space feel human.</h1>
-        <p class="lead">We build premium VR puzzle adventures set in a retro‑future world—cinematic, tactile, and designed for players who love to think with their hands.</p>
-        <div class="cta-row">
-          <a class="btn" href="#trailer" aria-label="Watch the Hustle trailer">Watch trailer</a>
-          <a class="btn secondary" href="#press" aria-label="Open the press kit">Press kit</a>
+    <section class="hero meta-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Invent what people feel.</h1>
+          <p class="lead">We make tactile VR puzzle experiences with crisp interactions, readable design, and performance that scales from Quest to PCVR.</p>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="#games">Explore Hustle</a>
+            <a class="btn btn-ghost" href="#press">Press kit</a>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orb"></div>
         </div>
       </div>
     </section>
 
-    <!-- Marquee cards -->
-    <section id="games" class="marquee container">
-      <div class="grid">
-        <article class="card reveal">
-          <span class="chip">Flagship</span>
-          <h3>Hustle</h3>
-          <p>VR puzzle heist on a space elevator. A stylish world inspired by 1990s–2000s retro‑future aesthetics.</p>
+    <!-- Product card(s) -->
+    <section id="games" class="section container">
+      <div class="cards">
+        <article class="card">
+          <div class="card-top">
+            <span class="tag">Flagship</span>
+            <h3>Hustle</h3>
+          </div>
+          <p class="muted">A VR puzzle heist aboard a city‑scale space elevator. Physical systems, chain‑reaction puzzles, and a stylish retro‑future world.</p>
           <div class="thumb" role="img" aria-label="Hustle promo art placeholder"></div>
-        </article>
-        <article class="card reveal">
-          <span class="chip">Available now</span>
-          <h3>8X</h3>
-          <p>Our award‑winning VR action title, available on Steam and the Meta Quest Store.</p>
-          <div class="thumb" role="img" aria-label="8X game art placeholder"></div>
+          <div class="card-actions">
+            <a class="btn btn-ghost-sm" href="#trailer">Watch trailer</a>
+            <a class="btn btn-link" href="#wishlist">Wishlist</a>
+          </div>
         </article>
       </div>
     </section>
 
-    <!-- Feature rows -->
-    <section id="universe" class="feature">
-      <div class="container row">
-        <div class="copy">
-          <h2>Retro‑future. Used‑future. All heart.</h2>
-          <p>Our worlds feel lived‑in: neon ad‑rafts drifting outside the porthole, patched hulls and humming servos. We design puzzles that obey physics and reward curiosity.</p>
+    <!-- Split feature -->
+    <section id="universe" class="section split">
+      <div class="container split-grid">
+        <div class="panel">
+          <h2>Readable at a glance.</h2>
+          <p class="muted">Clear interaction affordances, consistent haptics, and UI that respects your field of view. We test with comfort and clarity as first‑class constraints.</p>
         </div>
-        <div class="mock" aria-hidden="true"></div>
+        <div class="panel mock" aria-hidden="true"></div>
       </div>
     </section>
 
-    <section id="studio" class="feature">
-      <div class="container row">
-        <div class="mock" aria-hidden="true"></div>
-        <div class="copy">
-          <h2>Built by VR obsessives.</h2>
-          <p>Founded by engineers and artists who ship for Meta Quest, SteamVR, and beyond. We obsess over hand feel, performance, and legibility—down to the last shader.</p>
+    <section id="studio" class="section split">
+      <div class="container split-grid">
+        <div class="panel mock" aria-hidden="true"></div>
+        <div class="panel">
+          <h2>Engineering for presence.</h2>
+          <p class="muted">We obsess over frame timing, shader cost, and hand‑feel. Our teams ship to Meta Quest and SteamVR with deterministic performance budgets.</p>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer id="support">
+    <footer id="support" class="footer">
       <div class="container foot">
-        <div class="foot-grid">
+        <div class="foot-columns">
           <div>
-            <h4>Ylem Studio</h4>
-            <p>Crafting premium VR titles with tactile puzzle design.</p>
+            <h4 class="foot-h">Ylem Studio</h4>
+            <p class="muted">VR games, built with care.</p>
           </div>
           <div>
-            <h4>Games</h4>
+            <h4 class="foot-h">Links</h4>
             <a href="#games">Hustle</a><br />
-            <a href="#games">8X</a>
-          </div>
-          <div>
-            <h4>Studio</h4>
             <a href="#studio">About</a><br />
             <a href="#press">Press Kit</a>
           </div>
           <div>
-            <h4>Contact</h4>
+            <h4 class="foot-h">Contact</h4>
             <a href="mailto:hello@ylemstudio.com">hello@ylemstudio.com</a><br />
             <a href="#">Twitter / X</a>
           </div>
         </div>
         <div class="copyright">
-          <span>© <span id="year"></span> Ylem Studio. All rights reserved.</span>
-          <span>Privacy · Terms</span>
+          <span>© <span id="year"></span> Ylem Studio</span>
+          <span class="muted">Privacy · Terms</span>
         </div>
       </div>
     </footer>
 
     <script>
-      // Set year; add gentle in-view reveal for cards
       document.getElementById('year').textContent = new Date().getFullYear();
-
-      if (window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
-        const show = entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('in'));
-        const io = new IntersectionObserver(show, { threshold: .18 });
-        document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-      }
     </script>
   </body>
 </html>
