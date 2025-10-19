@@ -13,8 +13,9 @@
     <header class="nav" role="banner">
       <div class="container nav-inner">
         <a class="brand" href="#" aria-label="Ylem Studio home">
-          <span class="glyph">Y</span>
-          <span class="brand-text">Ylem Studio</span>
+          <!-- <span class="glyph">Y</span> -->
+          <!-- brand-bg: decorative background image slot (change URL below) -->
+          <img class="brand-logo" data-img-key="brandLogo" alt="Ylem Studio">
         </a>
         <nav class="menu" aria-label="primary">
           <a href="#games">Games</a>
@@ -24,19 +25,20 @@
         </nav>
       </div>
     </header>
-
+    
     <!-- Hero -->
-    <section class="hero meta-hero">
+    <section id="home" class="hero meta-hero">
       <div class="container hero-grid">
         <div class="hero-copy">
           <h1>Invent what people feel.</h1>
           <p class="lead">We make tactile VR puzzle experiences with crisp interactions, readable design, and performance that scales from Quest to PCVR.</p>
           <div class="cta-row">
             <a class="btn btn-solid" href="#games">Explore Hustle</a>
-            <a class="btn btn-ghost" href="#press">Press kit</a>
+            <a class="btn btn-ghost" href="#press">Contact Us</a>
           </div>
         </div>
         <div class="hero-art" aria-hidden="true">
+          <img data-img-key="orbImage" class="orb-image" alt="Stylized orb art">
           <div class="orb"></div>
         </div>
       </div>
@@ -47,11 +49,16 @@
       <div class="cards">
         <article class="card">
           <div class="card-top">
-            <span class="tag">Flagship</span>
+            <span class="tag">Newest Game</span>
             <h3>Hustle</h3>
           </div>
           <p class="muted">A VR puzzle heist aboard a city‑scale space elevator. Physical systems, chain‑reaction puzzles, and a stylish retro‑future world.</p>
-          <div class="thumb" role="img" aria-label="Hustle promo art placeholder"></div>
+          <div class="thumb" role="img" aria-label="Hustle promo art placeholder">
+            <video class = "trailer-video" controls data-img-key="trailerPoster" aria-label="Hustle promo video">
+              <source src="assets/PH_Trailer.mp4" type="video/mp4">
+            </video>
+          </div>
+          
           <div class="card-actions">
             <a class="btn btn-ghost-sm" href="#trailer">Watch trailer</a>
             <a class="btn btn-link" href="#wishlist">Wishlist</a>
@@ -60,10 +67,10 @@
       </div>
       <!-- Hustle screenshots gallery -->
       <div class="gallery" aria-label="Hustle screenshots">
-        <figure class="shot"><img src="assets/hustle-01.png" alt="Hustle — neon space elevator city view"></figure>
-        <figure class="shot"><img src="assets/hustle-02.png" alt="Hustle — cabin interior, retro-future UI and props"></figure>
-        <figure class="shot"><img src="assets/hustle-03.png" alt="Hustle — alarm red lighting, spider drone outside window"></figure>
-        <figure class="shot"><img src="assets/hustle-04.png" alt="Hustle — mechanical flower structure over trading floor"></figure>
+        <figure class="shot"><img data-img-key="galleryItem1" alt="Hustle — neon space elevator city view"></figure>
+        <figure class="shot"><img data-img-key="galleryItem2" alt="Hustle — cabin interior, retro-future UI and props"></figure>
+        <figure class="shot"><img data-img-key="galleryItem3" alt="Hustle — alarm red lighting, spider drone outside window"></figure>
+        <figure class="shot"><img data-img-key="galleryItem4" alt="Hustle — mechanical flower structure over trading floor"></figure>
       </div>
     </section>
 
@@ -71,25 +78,49 @@
     <section id="universe" class="section split">
       <div class="container split-grid">
         <div class="panel">
+          <h2>Our Universe</h2>
           <h2>Readable at a glance.</h2>
           <p class="muted">Clear interaction affordances, consistent haptics, and UI that respects your field of view. We test with comfort and clarity as first‑class constraints.</p>
         </div>
-        <div class="panel mock" aria-hidden="true"></div>
+        <a data-link-key="universeLink" class="panel mock" aria-hidden="true">
+          <img data-img-key="universeImage" alt="A glimpse into the retro-future universe of Ylem's games." class="panel-img">
+        </a>
       </div>
     </section>
 
     <section id="studio" class="section split">
       <div class="container split-grid">
-        <div class="panel mock" aria-hidden="true"></div>
+        <a data-link-key="studioLink" class="panel mock" aria-hidden="true">
+          <img data-img-key="studioImage" alt="The Ylem studio team working on VR game development." class="panel-img">
+        </a>
         <div class="panel">
+          <h2>About the Studio</h2>
           <h2>Engineering for presence.</h2>
           <p class="muted">We obsess over frame timing, shader cost, and hand‑feel. Our teams ship to Meta Quest and SteamVR with deterministic performance budgets.</p>
         </div>
       </div>
     </section>
 
+    <!-- Support Section -->
+    <section id="support" class="section container">
+      <h2>Support</h2>
+      <p class="muted">Have a question or need help? We're here for you. Check out our FAQ or get in touch with our support team.</p>
+      <div class="support-options">
+        <div class="support-option">
+          <h4>FAQ</h4>
+          <p class="muted">Find answers to common questions about our games and studio.</p>
+          <a class="btn btn-ghost-sm" href="#">View FAQ</a>
+        </div>
+        <div class="support-option">
+          <h4>Contact Us</h4>
+          <p class="muted">Can't find what you're looking for? Send us a message.</p>
+          <a class="btn btn-ghost-sm" href="#contact">Contact Form</a>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
-    <footer id="support" class="footer">
+    <footer id="contact" class="footer">
       <div class="container foot">
         <div class="foot-columns">
           <div>
@@ -115,8 +146,16 @@
       </div>
     </footer>
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+    <nav class="right-nav" aria-label="Page sections">
+      <ul>
+        <li><a href="#home" class="dot active" aria-label="Home section"></a></li>
+        <li><a href="#games" class="dot" aria-label="Games section"></a></li>
+        <li><a href="#universe" class="dot" aria-label="Universe section"></a></li>
+        <li><a href="#studio" class="dot" aria-label="Studio section"></a></li>
+        <li><a href="#support" class="dot" aria-label="Support section"></a></li>
+      </ul>
+    </nav>
+
+    <script src="scripts.js"></script>
   </body>
 </html>
