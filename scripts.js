@@ -36,6 +36,7 @@ const imageMapping = {
   galleryItem2: 'assets/hustle-02.png',
   galleryItem3: 'assets/hustle-03.png',
   galleryItem4: 'assets/hustle-04.png',
+  LiftImage: 'assets/lift1.png',
   orbImage: '' // Add the path to your orb image here
 };
 
